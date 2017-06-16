@@ -1,4 +1,4 @@
-package qa_agents.behaviour.student_agent;
+//package qa_agents.behaviour.student_agent;
 
 import jade.core.Agent;
 import jade.core.behaviours.*;
@@ -35,15 +35,15 @@ public class Teacher extends Agent
 								try {
 									//setting the initial questions
 									Map <String, String> question  = new HashMap<String, String>();
-									question.put("q1", "Question 1");
-									question.put("a11", "Option 1");
-									question.put("a12", "Option 2");
-									question.put("a13", "Option 3");
-									question.put("q2", "Question 2");
-									question.put("a21", "Answer 1");
-									question.put("a22", "Answer 2");
-									question.put("a23", "Answer 3");
-									question.put("a24", "Answer 4");
+									question.put("q1", "What is the sum of 1 + 1 in the binary system");
+									question.put("a11", "1");
+									question.put("a12", "10");
+									question.put("a13", "11");
+									question.put("q2", "Who is the father of computer science");
+									question.put("a21", "Alan Turing");
+									question.put("a22", "Liam Neeson");
+									question.put("a23", "Elon Musk");
+									question.put("a24", "Steve Jobs");
 									
 									// Creating the agent Student
 									AgentController acontroller = cur_container.createNewAgent( name, "qa_agents.behaviour.student_agent.Student", new Object[]{question});

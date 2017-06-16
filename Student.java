@@ -1,4 +1,4 @@
-package qa_agents.behaviour.student_agent;
+//package qa_agents.behaviour.student_agent;
 
 import jade.core.AID;
 import jade.core.Agent;
@@ -111,7 +111,7 @@ public class Student extends Agent  {
             send(msg);
         }
 
-    }
+    } 
 
 
 
