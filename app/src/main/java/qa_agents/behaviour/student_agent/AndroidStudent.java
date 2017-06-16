@@ -45,7 +45,7 @@ public class AndroidStudent extends Agent {
                 ACLMessage msg = receive();
                 if (msg != null) {
                     q = msg.getContent();
-                    myLogger.log( Logger.INFO, "\n"+"- Android Agent: "+getLocalName()+" Received: "+ q +"\n");
+                    myLogger.log( Logger.INFO, "\n"+"- Android Agent:  "+getLocalName()+" Received::  "+ q +"\n");
 
                     student = msg.getSender(); //keeping the sender for future handling
                     String[] vals = q.substring( 1,q.length()-1 ).split( "," );
