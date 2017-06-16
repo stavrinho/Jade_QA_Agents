@@ -55,7 +55,7 @@ public class QuestionerActivity extends AppCompatActivity {
         ch4 = (CheckBox) findViewById(R.id.checkBox4);
         radioButtonGroup = (RadioGroup) findViewById(R.id.GroupRadioButton);
 
-        //Button for receiving questionary
+        //Button for receiving questionnaire
         receiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,13 +86,13 @@ public class QuestionerActivity extends AppCompatActivity {
                 RadioButton selected_radio = (RadioButton)  findViewById(idx);
                 AndroidStudent.answer = new HashMap<String, String>();
                 //Put Values to Map answer
-                AndroidStudent.answer.put("q1", "Question 1");
+                AndroidStudent.answer.put("q1", AndroidStudent.question.get("q1"));
                 AndroidStudent.answer.put("a1", selected_radio.getText().toString());
-                AndroidStudent.answer.put("q2", "Question 2");
-                if (ch1.isChecked()) AndroidStudent.answer.put("a21", "Answer 1");
-                if (ch2.isChecked()) AndroidStudent.answer.put("a22", "Answer 2");
-                if (ch3.isChecked()) AndroidStudent.answer.put("a23", "Answer 3");
-                if (ch4.isChecked()) AndroidStudent.answer.put("a24", "Answer 4");
+                AndroidStudent.answer.put("q2", AndroidStudent.question.get("q2"));
+                if (ch1.isChecked()) AndroidStudent.answer.put("a21", AndroidStudent.question.get("a21"));
+                if (ch2.isChecked()) AndroidStudent.answer.put("a22", AndroidStudent.question.get("a22"));
+                if (ch3.isChecked()) AndroidStudent.answer.put("a23", AndroidStudent.question.get("a23"));
+                if (ch4.isChecked()) AndroidStudent.answer.put("a24", AndroidStudent.question.get("a24"));
 //                AndroidStudent.isAnswerSend = true;
 
                 if (send==0) {
@@ -200,6 +200,7 @@ public class QuestionerActivity extends AppCompatActivity {
         Map<String, String> q =  question;
         question1.setText( q.get("q1") );
         question2.setText( q.get("q2") );
+        //Toast.makeText(QuestionerActivity.this, q.get("q1"), Toast.LENGTH_SHORT).show();
 
         r1.setText( q.get("a11") );
         r2.setText( q.get("a12") );
