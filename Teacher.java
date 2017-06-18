@@ -39,11 +39,11 @@ public class Teacher extends Agent
 									question.put("a11", "1");
 									question.put("a12", "10");
 									question.put("a13", "11");
-									question.put("q2", "Who is the father of computer science");
-									question.put("a21", "Alan Turing");
-									question.put("a22", "Liam Neeson");
-									question.put("a23", "Elon Musk");
-									question.put("a24", "Steve Jobs");
+									question.put("q2", "Name some object oriented language");
+									question.put("a21", "Java");
+									question.put("a22", "JavaScript");
+									question.put("a23", "C");
+									question.put("a24", "Ruby");
 									
 									// Creating the agent Student
 									AgentController acontroller = cur_container.createNewAgent( name, "qa_agents.behaviour.student_agent.Student", new Object[]{question});
